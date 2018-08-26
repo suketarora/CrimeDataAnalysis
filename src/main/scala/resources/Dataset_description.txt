@@ -1,0 +1,22 @@
+id  -> unique  id
+Case_Number ->Case number
+Date -> Date of the Crime
+Block -> Block address of the Crime location
+IUCR -> IUCR id of the case
+Primary_type -> Crime Type
+Description ->Description of the crime
+Location_description -> location description of the crime
+Arrest -> True  if arrested  or false
+Domestic -> Sub Crime Type
+Beat -> Police beat
+District -> Code of the district
+Ward -> ward of the crime location
+community -> comunity service
+Fbicode -> fbi code for the crime
+X-Co ordinate ->X-Co ordinate 
+Y-Cor ordinate ->Y-Co ordinate 
+Year -> year of the crime
+Updated on -> date of the last updation
+lattitude -> lattitude
+longititude -> longititude 
+loctation -> full location with lattitide and longitude 

@@ -1,0 +1,4 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/suket/case_studies/CrimeAnalytics/src/main/resources/Crime_dataset.csv,/home/suket/case_studies/CrimeAnalytics/target/scala-2.11/classes/Crime_dataset.csv)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/suket/case_studies/CrimeAnalytics/src/main/resources/Dataset_description.txt,/home/suket/case_studies/CrimeAnalytics/target/scala-2.11/classes/Dataset_description.txt)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/suket/case_studies/CrimeAnalytics/src/main/resources/Problem.txt,/home/suket/case_studies/CrimeAnalytics/target/scala-2.11/classes/Problem.txt)[0m
