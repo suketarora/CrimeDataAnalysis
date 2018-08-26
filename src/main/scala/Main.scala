@@ -62,15 +62,6 @@ object Main extends App {
       .getOrCreate()
       
 
-
-   
-        // val path = sc.getClass.getResource("/")
-        // println("@@@@@" +path)
-
-
-  
-   
-
    val resource = getClass.getResourceAsStream("/Crime_dataset.csv")
     if (resource == null) sys.error("Please download the  dataset ")
      val RddRaw =  sc.parallelize(Source.fromInputStream(resource).getLines().toList)
@@ -114,6 +105,7 @@ object Main extends App {
 
     val TheftRelatedArrestsInEachDistrict : Array[(String, Long)] =  CrimeDS.filter(($"Primary_type" === "THEFT") && ($"Arrest" === true)).groupBy($"District").count.collect.map {row => (row(0).asInstanceOf[String],row(1).asInstanceOf[Long])}// (District, Arrest_count)
   
+       println()
     println("Number of Crimes in each FBI code : ")
     println()
      for ( count <- 0 to CrimesInEachFbicode.length-1){
@@ -127,7 +119,7 @@ object Main extends App {
 
                         }
 
-
+       println()
         println("Most frequent crimes in District : ")
     println()
      for ( count <- 0 to MostFrequentCrimesinEachDistrict.length-1){
@@ -139,8 +131,20 @@ object Main extends App {
                          println(f"District = $District%4s    Most frequent FBI Crime Code  = $Fbicode")
                         
 
-                        }                   
+                        }  
+          println()                 
+             println("Number of Crimes in each FBI code : ")
+    println()
+     for ( count <- 0 to TheftRelatedArrestsInEachDistrict.length-1){
 
+                         var tuple = TheftRelatedArrestsInEachDistrict(count)
+                         // println(tuple)
+                         var District = tuple._1
+                         var Arrestcount = tuple._2
+                         println(f"District = $District%4s    Number of Arrests for Theft = $Arrestcount")
+                        
+
+                        }
   sc.stop()
     }
 }
