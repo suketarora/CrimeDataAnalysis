@@ -1,10 +1,11 @@
-#Crime Analysis Case Study
+# Crime Analysis Case Study
 
-Just pull the repository and run 
->sbt run
+Just pull the repository and run command in Directory containing build.sbt
+ 
+> sbt run
 
 
-#Problem Statement
+# Problem Statement
 
 1. Find number of crimes that happened under each FBI code.
     a. find in which location under on FBI code have max no. of crimes
